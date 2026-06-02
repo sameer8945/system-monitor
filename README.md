@@ -1,8 +1,8 @@
 ## Installation (Linux)
 
 ```bash
-git clone https://github.com/sameer8945/task-manager.git
-cd task-manager
+git clone https://github.com/sameer8945/system-monitor.git
+cd system-monitor
 
 python3 -m venv venv
 source venv/bin/activate
@@ -14,8 +14,8 @@ python app.py
 ## Installation (Windows)
 
 ```powershell
-git clone https://github.com/sameer8945/task-manager.git
-cd task-manager
+git clone https://github.com/sameer8945/system-monitor.git
+cd system-monitor
 
 python -m venv venv
 venv\Scripts\activate
