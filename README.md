@@ -1,4 +1,3 @@
-# Linux Monitor Dashboard
 
 ## Installation
 
