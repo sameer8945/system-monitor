@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script defer
+            src="{{ url_for('static', filename='script.js') }}">
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Dashboard</h1>
+</header>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+
+        <div class="card">
+            <h2>System Information</h2>
+
+            <div class="info-row">
+                <span>OS</span>
+                <span id="os"></span>
+            </div>
+
+            <div class="info-row">
+                <span>Kernel</span>
+                <span id="kernel"></span>
+            </div>
+
+            <div class="info-row">
+                <span>Architecture</span>
+                <span id="architecture"></span>
+            </div>
+
+            <div class="info-row">
+                <span>Uptime</span>
+                <span id="uptime"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Network</h2>
+
+            <div class="network-row">
+                <span>⬆ Upload</span>
+                <span id="upload">0 MB</span>
+            </div>
+
+            <div class="network-row">
+                <span>⬇ Download</span>
+                <span id="download">0 MB</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="top-cards">
+
+            <div class="metric-card">
+                <h3>CPU Usage</h3>
+                <div class="metric-value" id="cpu">{{ cpu }}%</div>
+            </div>
+
+            <div class="metric-card">
+                <h3>RAM Usage</h3>
+                <div class="metric-value" id="ram">{{ ram }}%</div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Disk Usage</h3>
+                <div class="metric-value" id="disk">{{ disk }}%</div>
+            </div>
+
+        </div>
+
+        <div class="bottom-section">
+
+            <div class="card cores-card">
+                <h2>CPU Cores</h2>
+
+                <div id="cpu-cores"></div>
+            </div>
+
+            <div class="card process-card">
+
+                <div class="table-header">
+                    <h2>Processes</h2>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Name</th>
+                            <th>CPU %</th>
+                            <th>RAM %</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="process-table">
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
