@@ -1,9 +1,8 @@
-
-## Installation
+## Installation (Linux)
 
 ```bash
-git clone <repo-url>
-cd linux-monitor
+git clone https://github.com/sameer8945/task-manager.git
+cd task-manager
 
 python3 -m venv venv
 source venv/bin/activate
@@ -12,6 +11,16 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open:
+## Installation (Windows)
 
-http://127.0.0.1:5000
+```powershell
+git clone https://github.com/sameer8945/task-manager.git
+cd task-manager
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
+python app.py
+```
+

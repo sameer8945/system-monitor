@@ -24,7 +24,7 @@ def home():
 def stats():
     processes = []
     net = psutil.net_io_counters()
-    cpu_cores = psutil.cpu_percent(percpu=True)
+    cpu_cores = psutil.cpu_percent(interval=0.1 , percpu=True)
     for proc in psutil.process_iter(
         ['pid', 'name', 'cpu_percent', 'memory_percent']
     ):
@@ -47,7 +47,7 @@ def stats():
     uptime_seconds = int(time.time() - boot_time)
 
     return jsonify({
-        "cpu": psutil.cpu_percent(),
+        "cpu": psutil.cpu_percent(interval=0.1),
         "ram": psutil.virtual_memory().percent,
         "disk": psutil.disk_usage('/').percent,
         "cpu_cores": cpu_cores,
