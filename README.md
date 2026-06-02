@@ -13,14 +13,15 @@ python app.py
 
 ## Installation (Windows)
 
-```powershell
+```command prompt
 git clone https://github.com/sameer8945/system-monitor.git
 cd system-monitor
 
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate.bat
 
-pip install -r requirements.txt
+pip install flask
+pip install psutil
 python app.py
 ```
 
