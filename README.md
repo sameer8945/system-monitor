@@ -20,8 +20,7 @@ cd system-monitor
 python -m venv venv
 venv\Scripts\activate.bat
 
-pip install flask
-pip install psutil
+pip install -r requirements.txt
 python app.py
 ```
 
